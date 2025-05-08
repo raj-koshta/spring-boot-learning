@@ -1,13 +1,14 @@
 package com.beginnertech.journalAppV2.entity;
 
+import lombok.Data;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.xml.crypto.Data;
 import java.time.LocalDateTime;
 
 @Document(collection = "journal_entries")
+@Data
 public class JournalEntry {
 
     @Id
@@ -16,36 +17,38 @@ public class JournalEntry {
     private String content;
     private LocalDateTime date;
 
-    public LocalDateTime getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }
 
     // --------------- Getter Setters -----------------------
-    public ObjectId getId() {
-        return id;
-    }
 
-    public void setId(ObjectId id) {
-        this.id = id;
-    }
+//    public LocalDateTime getDate() {
+//        return date;
+//    }
+//
+//    public void setDate(LocalDateTime date) {
+//        this.date = date;
+//    }
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
+//    public ObjectId getId() {
+//        return id;
+//    }
+//
+//    public void setId(ObjectId id) {
+//        this.id = id;
+//    }
+//
+//    public String getTitle() {
+//        return title;
+//    }
+//
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
+//
+//    public String getContent() {
+//        return content;
+//    }
+//
+//    public void setContent(String content) {
+//        this.content = content;
+//    }
 }
